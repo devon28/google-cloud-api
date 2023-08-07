@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Portfolio Project</title>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    {% if session %}
+        <h1>Welcome {{session.userinfo.name}}!</h1>
+        <p>User id: {{session.userinfo.sub}}</p>
+        <p><a href="/logout">Logout</a></p>
+       
+        <div id="jwt"><pre>{{pretty}}</pre></div>
+        
+    {% else %}
+        <h1>Welcome Guest</h1>
+        <p>Login or create a new user</p>
+        <p><a href="/login">Login</a></p>
+    {% endif %}
+  </body>
+</html>

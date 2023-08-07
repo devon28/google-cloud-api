@@ -1,0 +1,8 @@
+body {
+    border: 2px solid lightblue;
+    text-align: center;
+    padding: 15px;
+}
+#jwt {
+    text-align: left;
+}
